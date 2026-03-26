@@ -34,7 +34,7 @@ const path = require('path');
       });
     });
 
-    const outputPath = path.join(__dirname, '..', 'docs', '30kpoints.txt');
+    const outputPath = path.join(__dirname, '..', 'docs', '30kPoints');
     fs.writeFileSync(outputPath, points);
     console.log('Points saved:', points);
   } catch (error) {
