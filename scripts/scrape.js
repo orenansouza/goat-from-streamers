@@ -34,7 +34,9 @@ const path = require('path');
       });
     });
 
-    const outputPath = path.join(__dirname, '..', 'docs', '30kPoints');
+    const outputDir = path.join(__dirname, '..', 'docs', '30kPoints');
+    fs.mkdirSync(outputDir, { recursive: true });
+    const outputPath = path.join(outputDir, 'index.html');
     fs.writeFileSync(outputPath, points);
     console.log('Points saved:', points);
   } catch (error) {
